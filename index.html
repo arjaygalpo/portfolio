@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Arjay Galpo — IT Support, Systems & Web Development</title>
-  <meta name="description" content="Arjay Galpo — IT professional with 8 years of technical support across POS systems, Windows Server, networking and security, plus web development and AI engineering.">
+  <title data-i18n="meta.title">Arjay Galpo — IT Support, Systems & Web Development</title>
+  <meta name="description" data-i18n-attr="content:meta.desc" content="Arjay Galpo — IT professional with 8 years of technical support across POS systems, Windows Server, networking and security, plus web development and AI engineering.">
   <meta name="theme-color" content="#07090c">
   <meta property="og:title" content="Arjay Galpo — IT Professional & Developer">
   <meta property="og:description" content="IT Support • Systems • POS Technology • Web Development • AI Engineering">
@@ -21,20 +21,25 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
   <header class="nav" id="nav">
-    <a class="nav__brand" href="#top" aria-label="Arjay Galpo, home">AG<span>.</span></a>
-    <nav aria-label="Primary">
-      <ul class="nav__links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Expertise</a></li>
-        <li><a href="#redm">RedM</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#credentials">Credentials</a></li>
-        <li><a href="#contact" class="nav__cta">Contact</a></li>
-      </ul>
-    </nav>
+    <a class="nav__brand" href="#top" aria-label="Arjay Galpo, home" data-i18n-attr="aria-label:nav.home">AG<span>.</span></a>
+    <div class="nav__right">
+      <nav aria-label="Primary" data-i18n-attr="aria-label:nav.primary">
+        <ul class="nav__links">
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#work" data-i18n="nav.work">Expertise</a></li>
+          <li><a href="#redm">RedM</a></li>
+          <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+          <li><a href="#credentials" data-i18n="nav.credentials">Credentials</a></li>
+          <li><a href="#contact" class="nav__cta" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="lang" role="group" aria-label="Language" data-i18n-attr="aria-label:lang.group">
+        <button type="button" class="lang__btn" data-lang="en" lang="en" aria-pressed="true" aria-label="English">EN</button>
+        <button type="button" class="lang__btn" data-lang="fr" lang="fr" aria-pressed="false" aria-label="Français">FR</button>
+      </div>
+    </div>
   </header>
 
   <main id="main">
@@ -44,7 +49,7 @@
 
       <div class="hero__grid container">
         <div class="hero__name reveal">
-          <p class="eyebrow"><span class="dot"></span> Available<span class="hide-sm"> for IT &amp; development roles</span> · Québec City</p>
+          <p class="eyebrow" data-i18n="hero.eyebrow"><span class="dot"></span> Available<span class="hide-sm"> for IT &amp; development roles</span> · Québec City</p>
           <h1 class="hero__title">
             <span class="line">ARJAY</span>
             <span class="line line--accent">GALPO</span>
@@ -66,10 +71,11 @@
                      sizes="(max-width: 900px) 78vw, 440px"
                      width="1365" height="2048"
                      alt="Portrait of Arjay Galpo in a suit, lit with red and green studio light"
+                     data-i18n-attr="alt:hero.alt"
                      fetchpriority="high" decoding="async">
               </picture>
               <div class="portrait__sheen" aria-hidden="true"></div>
-              <figcaption class="portrait__badge">
+              <figcaption class="portrait__badge" data-i18n="hero.badge">
                 <span class="pulse"></span> 8+ yrs in IT support
               </figcaption>
             </figure>
@@ -77,7 +83,7 @@
             <!-- Floating tech chips: data-depth drives parallax strength -->
             <ul class="chips" aria-hidden="true">
               <li class="chip chip--code"  data-depth="1.2" style="--x:-6%;  --y:8%;  --d:0s">&lt;/&gt;</li>
-              <li class="chip chip--ai"    data-depth="1.6" style="--x:42%;  --y:-2%; --d:-6s">AI Engineer</li>
+              <li class="chip chip--ai"    data-depth="1.6" style="--x:42%;  --y:-2%; --d:-6s" data-i18n="chip.ai">AI Engineer</li>
               <li class="chip"             data-depth="0.9" style="--x:78%;  --y:4%;  --d:-2s">Windows Server</li>
               <li class="chip chip--red"   data-depth="1.4" style="--x:-14%; --y:34%; --d:-4s">POS</li>
               <li class="chip"             data-depth="0.7" style="--x:88%;  --y:26%; --d:-1s">PHP</li>
@@ -92,25 +98,25 @@
         </div>
 
         <div class="hero__body reveal" style="--delay:.15s">
-          <p class="hero__roles">IT Support <i>•</i> Systems <i>•</i> POS Technology <i>•</i> Web Development <i>•</i> AI Engineering</p>
-          <p class="hero__intro">
+          <p class="hero__roles" data-i18n="hero.roles">IT Support <i>•</i> Systems <i>•</i> POS Technology <i>•</i> Web Development <i>•</i> AI Engineering</p>
+          <p class="hero__intro" data-i18n="hero.intro">
             I keep business technology running. For eight years I deployed and supported
             POS systems, servers, networks and security for some of the Philippines' largest
             restaurant brands. Now I build web apps and AI-powered tools with PHP, JavaScript and MySQL.
           </p>
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#work">View My Work <span aria-hidden="true">→</span></a>
-            <a class="btn btn--ghost" href="#contact">Contact Me</a>
+            <a class="btn btn--primary" href="#work" data-i18n="hero.cta.work">View My Work <span aria-hidden="true">→</span></a>
+            <a class="btn btn--ghost" href="#contact" data-i18n="hero.cta.contact">Contact Me</a>
           </div>
           <dl class="hero__stats">
-            <div><dt>8 yrs</dt><dd>Technical support</dd></div>
-            <div><dt>5</dt><dd>Restaurant brands supported</dd></div>
-            <div><dt>3</dt><dd>POS platform migrations</dd></div>
+            <div><dt data-i18n="stat.years">8 yrs</dt><dd data-i18n="stat.years.label">Technical support</dd></div>
+            <div><dt>5</dt><dd data-i18n="stat.brands">Restaurant brands supported</dd></div>
+            <div><dt>3</dt><dd data-i18n="stat.migrations">POS platform migrations</dd></div>
           </dl>
         </div>
       </div>
 
-      <a class="scroll-cue" href="#about" aria-label="Scroll to About"><span></span></a>
+      <a class="scroll-cue" href="#about" aria-label="Scroll to About" data-i18n-attr="aria-label:hero.scroll"><span></span></a>
     </section>
 
     <!-- ============ ABOUT ============ -->
@@ -131,34 +137,34 @@
           </div>
           <div class="profile-card__body">
             <h2 class="profile-card__name">ARJAY GALPO</h2>
-            <p class="profile-card__title">IT Professional &amp; Developer</p>
+            <p class="profile-card__title" data-i18n="profile.title">IT Professional &amp; Developer</p>
             <ul class="profile-card__facts">
-              <li><span>Based in</span> Québec City, Canada</li>
-              <li><span>Degree</span> BS Information Technology</li>
-              <li><span>Focus</span> Systems · POS · Web · AI</li>
-              <li><span>Languages</span> Tagalog · English · French</li>
+              <li data-i18n="profile.based"><span>Based in</span> Québec City, Canada</li>
+              <li data-i18n="profile.degree"><span>Degree</span> BS Information Technology</li>
+              <li data-i18n="profile.focus"><span>Focus</span> Systems · POS · Web · AI</li>
+              <li data-i18n="profile.langs"><span>Languages</span> Tagalog · English · French</li>
             </ul>
           </div>
         </aside>
 
         <div class="about__text">
-          <p class="kicker reveal">About me</p>
-          <h2 class="section__title reveal">Hands-on IT, from server room to sales floor.</h2>
+          <p class="kicker reveal" data-i18n="about.kicker">About me</p>
+          <h2 class="section__title reveal" data-i18n="about.title">Hands-on IT, from server room to sales floor.</h2>
           <div class="reveal">
-            <p>
+            <p data-i18n="about.p1">
               I hold a <strong>Bachelor of Science in Information Technology</strong> from STI College Caloocan.
               From 2016 to 2024 I was a <strong>Technical Support</strong> specialist at
               <strong>PPI Holdings Inc.</strong>, which operates Pizza Hut, Taco Bell and Dairy Queen in the Philippines.
               My job was to keep stores, call centres and data centres running.
             </p>
-            <p>
+            <p data-i18n="about.p2">
               I set up and troubleshot POS systems across five brands and led migrations from
               Fenix to Cuscapi, from Cuscapi to Aloha, and from Aloha and Chase to ANSI.
               I also installed structured cabling, built Windows servers with daily backups, and maintained
               Avaya and PABX telephony, CCTV, biometric HRIS and door-lock systems.
               For new store openings, I handled the full IT setup.
             </p>
-            <p>
+            <p data-i18n="about.p3">
               Since moving to Québec City, I've worked in restaurant and retail operations, including as
               Assistant Restaurant General Manager. That work taught me how the systems I used to support
               hold up during a busy shift. In parallel I build with
@@ -166,7 +172,7 @@
               <strong>AI engineer</strong>, connecting large language models to real business tools: chat assistants, automated support workflows, and features built on AI APIs.
             </p>
           </div>
-          <ul class="tags reveal">
+          <ul class="tags reveal" data-i18n="about.tags">
             <li>Windows Server &amp; VMware</li><li>Networking</li><li>POS Systems</li>
             <li>CCTV &amp; Security</li><li>PHP / MySQL</li><li>Lua</li><li>AI / LLM Integration</li>
           </ul>
@@ -177,11 +183,11 @@
     <!-- ============ EXPERTISE ============ -->
     <section class="section section--alt" id="work">
       <div class="container">
-        <p class="kicker reveal">What I do</p>
-        <h2 class="section__title reveal">Expertise</h2>
+        <p class="kicker reveal" data-i18n="work.kicker">What I do</p>
+        <h2 class="section__title reveal" data-i18n="work.title">Expertise</h2>
 
-        <div class="migration reveal" aria-label="POS migrations led">
-          <p class="migration__label">POS migrations I've carried out</p>
+        <div class="migration reveal" aria-label="POS migrations led" data-i18n-attr="aria-label:work.mig.aria">
+          <p class="migration__label" data-i18n="work.mig.label">POS migrations I've carried out</p>
           <ol class="migration__path">
             <li>Fenix <small>DOS</small></li>
             <li>Cuscapi</li>
@@ -196,9 +202,9 @@
               <svg viewBox="0 0 24 24"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg>
             </div>
             <div>
-              <h3>AI Engineering</h3>
-              <p>I add AI to working systems: LLM-powered chat assistants, automated IT-support and helpdesk workflows, and AI features built into PHP and JavaScript web apps. Prompt engineering and API integration ground the models in real business data.</p>
-              <ul class="card__tags"><li>LLM APIs</li><li>Prompt engineering</li><li>AI chatbots</li><li>Workflow automation</li><li>RAG</li></ul>
+              <h3 data-i18n="work.ai.h">AI Engineering</h3>
+              <p data-i18n="work.ai.p">I add AI to working systems: LLM-powered chat assistants, automated IT-support and helpdesk workflows, and AI features built into PHP and JavaScript web apps. Prompt engineering and API integration ground the models in real business data.</p>
+              <ul class="card__tags" data-i18n="work.ai.tags"><li>LLM APIs</li><li>Prompt engineering</li><li>AI chatbots</li><li>Workflow automation</li><li>RAG</li></ul>
             </div>
           </article>
 
@@ -206,8 +212,8 @@
             <div class="card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
             </div>
-            <h3>POS Systems</h3>
-            <p>Setup, troubleshooting and migrations for Taco Bell, Pizza Hut, Dairy Queen, Snaxx and Sachi.</p>
+            <h3 data-i18n="work.pos.h">POS Systems</h3>
+            <p data-i18n="work.pos.p">Setup, troubleshooting and migrations for Taco Bell, Pizza Hut, Dairy Queen, Snaxx and Sachi.</p>
             <ul class="card__tags"><li>Aloha</li><li>Cuscapi</li><li>ANSI</li><li>Chase</li></ul>
           </article>
 
@@ -215,35 +221,35 @@
             <div class="card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="7" rx="1.5"/><rect x="4" y="14" width="16" height="7" rx="1.5"/><path d="M8 6.5h.01M8 17.5h.01"/></svg>
             </div>
-            <h3>Servers &amp; Data</h3>
-            <p>Windows Server builds for data and call centres, VMware virtualisation and daily backup routines.</p>
-            <ul class="card__tags"><li>Windows Server</li><li>VMware</li><li>Backups</li></ul>
+            <h3 data-i18n="work.srv.h">Servers &amp; Data</h3>
+            <p data-i18n="work.srv.p">Windows Server builds for data and call centres, VMware virtualisation and daily backup routines.</p>
+            <ul class="card__tags" data-i18n="work.srv.tags"><li>Windows Server</li><li>VMware</li><li>Backups</li></ul>
           </article>
 
           <article class="card reveal" data-tilt style="--delay:.1s">
             <div class="card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v5M12 12l-6 5M12 12l6 5"/></svg>
             </div>
-            <h3>Networking &amp; Cabling</h3>
-            <p>Structured cabling and network design for stores and call centres, including modem links between them.</p>
-            <ul class="card__tags"><li>Structured cabling</li><li>LAN</li><li>Troubleshooting</li></ul>
+            <h3 data-i18n="work.net.h">Networking &amp; Cabling</h3>
+            <p data-i18n="work.net.p">Structured cabling and network design for stores and call centres, including modem links between them.</p>
+            <ul class="card__tags" data-i18n="work.net.tags"><li>Structured cabling</li><li>LAN</li><li>Troubleshooting</li></ul>
           </article>
 
           <article class="card reveal" data-tilt style="--delay:.15s">
             <div class="card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
             </div>
-            <h3>Security &amp; Telephony</h3>
-            <p>CCTV, HRIS biometrics, door-lock and ticketing systems, plus Avaya and analog PABX phones.</p>
-            <ul class="card__tags"><li>CCTV</li><li>Biometrics</li><li>Avaya</li><li>PABX</li></ul>
+            <h3 data-i18n="work.sec.h">Security &amp; Telephony</h3>
+            <p data-i18n="work.sec.p">CCTV, HRIS biometrics, door-lock and ticketing systems, plus Avaya and analog PABX phones.</p>
+            <ul class="card__tags" data-i18n="work.sec.tags"><li>CCTV</li><li>Biometrics</li><li>Avaya</li><li>PABX</li></ul>
           </article>
 
           <article class="card reveal" data-tilt style="--delay:.2s">
             <div class="card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg>
             </div>
-            <h3>Web Development</h3>
-            <p>Server-rendered sites and web tools built with PHP and MySQL/MariaDB on the back end and HTML, CSS and JavaScript on the front end.</p>
+            <h3 data-i18n="work.web.h">Web Development</h3>
+            <p data-i18n="work.web.p">Server-rendered sites and web tools built with PHP and MySQL/MariaDB on the back end and HTML, CSS and JavaScript on the front end.</p>
             <ul class="card__tags"><li>PHP</li><li>JavaScript</li><li>MySQL</li><li>HTML/CSS</li></ul>
           </article>
 
@@ -251,9 +257,9 @@
             <div class="card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="11" rx="4"/><path d="M7 11v3M5.5 12.5h3M16 11.5h.01M18 13.5h.01"/></svg>
             </div>
-            <h3>Game Server Scripting</h3>
-            <p>FiveM developer since 2019 and building for RedM since 2025: Lua scripting and server setup for roleplay communities.</p>
-            <ul class="card__tags"><li>Lua</li><li>FiveM · since 2019</li><li>RedM · since 2025</li></ul>
+            <h3 data-i18n="work.game.h">Game Server Scripting</h3>
+            <p data-i18n="work.game.p">FiveM developer since 2019 and building for RedM since 2025: Lua scripting and server setup for roleplay communities.</p>
+            <ul class="card__tags" data-i18n="work.game.tags"><li>Lua</li><li>FiveM · since 2019</li><li>RedM · since 2025</li></ul>
           </article>
         </div>
       </div>
@@ -262,85 +268,85 @@
     <!-- ============ REDM PROJECTS ============ -->
     <section class="section" id="redm">
       <div class="container">
-        <p class="kicker reveal">RedM · since 2025</p>
-        <h2 class="section__title reveal">Mavarne RedM scripts</h2>
-        <p class="section__lead reveal">
+        <p class="kicker reveal" data-i18n="redm.kicker">RedM · since 2025</p>
+        <h2 class="section__title reveal" data-i18n="redm.title">Mavarne RedM scripts</h2>
+        <p class="section__lead reveal" data-i18n="redm.lead">
           A suite of RedM resources I write and maintain under the Mavarne name, built on VORP Core
           with Lua, oxmysql and custom NUI interfaces. They are designed to work together:
           Priority Status gates robberies, and the gameplay scripts share the same progress bar and notification style.
         </p>
 
-        <p class="projects__label reveal">Featured</p>
+        <p class="projects__label reveal" data-i18n="redm.featured">Featured</p>
         <div class="cards projects">
           <article class="card project project--featured project--full reveal" data-tilt>
-            <span class="project__badge">Featured</span>
+            <span class="project__badge" data-i18n="redm.featured">Featured</span>
             <p class="project__res">mavarne_cockfighting</p>
-            <h3>Cockfighting Pits</h3>
-            <p>Raise, train and breed roosters, then fight them in PvP matches with stakes and spectator betting. The server decides every fight, bet, payout and breeding roll.</p>
-            <ul class="project__features"><li>Chicks hatch at the ranch and grow into fighters; up to 6 roosters per character</li><li>Care that keeps running offline: hunger, energy, grooming, sickness, wounds and bleeding</li><li>9 stats capped by genetic potential and rarity, with XP and levels</li><li>Breeding with rising fees, a 7-breed limit and no close relatives; eggs hatch in your coop</li><li>PvP fights with equal stakes, spectator betting, a live fight HUD and practice spars</li><li>Losers can die or carry injuries that need medicine to heal</li><li>Rooster auction house, player-to-player sales and a feed and medicine dealer</li><li>Rooster book (<code>/manok</code>) and a leaderboard</li></ul>
-            <ul class="card__tags"><li>VORP</li><li>oxmysql</li><li>NUI</li><li>Genetics</li></ul>
+            <h3 data-i18n="p.cock.h">Cockfighting Pits</h3>
+            <p data-i18n="p.cock.p">Raise, train and breed roosters, then fight them in PvP matches with stakes and spectator betting. The server decides every fight, bet, payout and breeding roll.</p>
+            <ul class="project__features" data-i18n="p.cock.f"><li>Chicks hatch at the ranch and grow into fighters; up to 6 roosters per character</li><li>Care that keeps running offline: hunger, energy, grooming, sickness, wounds and bleeding</li><li>9 stats capped by genetic potential and rarity, with XP and levels</li><li>Breeding with rising fees, a 7-breed limit and no close relatives; eggs hatch in your coop</li><li>PvP fights with equal stakes, spectator betting, a live fight HUD and practice spars</li><li>Losers can die or carry injuries that need medicine to heal</li><li>Rooster auction house, player-to-player sales and a feed and medicine dealer</li><li>Rooster book (<code>/manok</code>) and a leaderboard</li></ul>
+            <ul class="card__tags" data-i18n="p.cock.tags"><li>VORP</li><li>oxmysql</li><li>NUI</li><li>Genetics</li></ul>
           </article>
           <article class="card project project--featured project--wide reveal" data-tilt style="--delay:.05s">
-            <span class="project__badge">Featured</span>
+            <span class="project__badge" data-i18n="redm.featured">Featured</span>
             <p class="project__res">mavarne_admin</p>
-            <h3>Admin Panel</h3>
-            <p>A staff panel (<code>/admincheck</code>) to look up players, wagons, backpacks, houses and horses, plus tools for fixing players nobody can see.</p>
-            <ul class="project__features"><li>Player lookup: inventory, weapons, wagons, stashes and backpacks</li><li>Tabs for backpacks, wagons and cargo, gum_housing houses and gum_stables horses</li><li>Teleport to backpacks and houses, toggle house blips, edit or revive horses</li><li>Delete mode (<code>/admindelete</code>) locked to a server-side Steam allowlist</li><li>Bucket and visibility fixes: <code>/bucket</code>, <code>/fixbucket</code>, <code>/checkplayer</code>, <code>/fixvisible</code>, <code>/vislog</code></li><li>Discord logs for txAdmin actions, <code>/heal</code>, <code>/revive</code>, <code>/tpm</code>, money and item spawns</li><li>Randomised event names, server-side permission checks and rate limits</li></ul>
+            <h3 data-i18n="p.admin.h">Admin Panel</h3>
+            <p data-i18n="p.admin.p">A staff panel (<code>/admincheck</code>) to look up players, wagons, backpacks, houses and horses, plus tools for fixing players nobody can see.</p>
+            <ul class="project__features" data-i18n="p.admin.f"><li>Player lookup: inventory, weapons, wagons, stashes and backpacks</li><li>Tabs for backpacks, wagons and cargo, gum_housing houses and gum_stables horses</li><li>Teleport to backpacks and houses, toggle house blips, edit or revive horses</li><li>Delete mode (<code>/admindelete</code>) locked to a server-side Steam allowlist</li><li>Bucket and visibility fixes: <code>/bucket</code>, <code>/fixbucket</code>, <code>/checkplayer</code>, <code>/fixvisible</code>, <code>/vislog</code></li><li>Discord logs for txAdmin actions, <code>/heal</code>, <code>/revive</code>, <code>/tpm</code>, money and item spawns</li><li>Randomised event names, server-side permission checks and rate limits</li></ul>
             <ul class="card__tags"><li>VORP</li><li>oxmysql</li><li>NUI</li><li>Discord</li></ul>
           </article>
           <article class="card project project--featured reveal" data-tilt style="--delay:.1s">
-            <span class="project__badge">Featured</span>
+            <span class="project__badge" data-i18n="redm.featured">Featured</span>
             <p class="project__res">mavarne_planting</p>
-            <h3>Planting &amp; Farming</h3>
-            <p>A full farming loop: rake the soil, plant, water, fertilize and harvest anywhere outside town limits.</p>
-            <ul class="project__features"><li>Two-step planting with a worked-soil prop under each crop</li><li>Water gate: growth pauses until the plant is watered again</li><li>Fertilizer boosts the harvest reward</li><li>Water buckets filled at pumps</li><li>Batched growth saves to the database</li><li>Tabbed admin panel: farms, plants, give item, stats</li></ul>
+            <h3 data-i18n="p.plant.h">Planting &amp; Farming</h3>
+            <p data-i18n="p.plant.p">A full farming loop: rake the soil, plant, water, fertilize and harvest anywhere outside town limits.</p>
+            <ul class="project__features" data-i18n="p.plant.f"><li>Two-step planting with a worked-soil prop under each crop</li><li>Water gate: growth pauses until the plant is watered again</li><li>Fertilizer boosts the harvest reward</li><li>Water buckets filled at pumps</li><li>Batched growth saves to the database</li><li>Tabbed admin panel: farms, plants, give item, stats</li></ul>
             <ul class="card__tags"><li>VORP</li><li>vorp_inventory</li><li>oxmysql</li></ul>
           </article>
         </div>
 
-        <p class="projects__label reveal">More scripts</p>
+        <p class="projects__label reveal" data-i18n="redm.more">More scripts</p>
         <div class="cards projects">
           <article class="card project reveal" data-tilt>
             <p class="project__res">mavarne_society</p>
-            <h3>Society Job System</h3>
-            <p>A VORP-native job system with an old-RedM styled interface. It replaces both vorp_billing and vorp_paycheck and creates its own database schema on first start.</p>
-            <ul class="project__features"><li>Admin panel (<code>/jobsadmin</code>) to create societies, ranks and paycheck amounts</li><li>Boss Actions (<code>/boss</code>): hire, promote, society balance, deposit and withdraw</li><li>Bosses can only manage ranks below their own</li><li>Ranked paychecks paid by the server or the society treasury</li><li>Time clock (<code>/duty</code>) with live shift timer and shift history</li><li>Public and personal society storage, opened with a G prompt</li><li>Billing (<code>/bill</code>) with income flowing into the treasury</li></ul>
+            <h3 data-i18n="p.soc.h">Society Job System</h3>
+            <p data-i18n="p.soc.p">A VORP-native job system with an old-RedM styled interface. It replaces both vorp_billing and vorp_paycheck and creates its own database schema on first start.</p>
+            <ul class="project__features" data-i18n="p.soc.f"><li>Admin panel (<code>/jobsadmin</code>) to create societies, ranks and paycheck amounts</li><li>Boss Actions (<code>/boss</code>): hire, promote, society balance, deposit and withdraw</li><li>Bosses can only manage ranks below their own</li><li>Ranked paychecks paid by the server or the society treasury</li><li>Time clock (<code>/duty</code>) with live shift timer and shift history</li><li>Public and personal society storage, opened with a G prompt</li><li>Billing (<code>/bill</code>) with income flowing into the treasury</li></ul>
             <ul class="card__tags"><li>Lua</li><li>VORP</li><li>ox_lib</li><li>oxmysql</li><li>NUI</li></ul>
           </article>
           <article class="card project reveal" data-tilt>
             <p class="project__res">mavarne_robbery</p>
-            <h3>Robbery System</h3>
-            <p>Configurable timed robberies with trigger spots and zones. Every location can override the defaults.</p>
-            <ul class="project__features"><li>Required item checked on the server</li><li>Minimum cops and doctors online per location</li><li>Police alerts, cooldowns and rewards</li><li>Cancel at any time with Backspace</li><li>Only starts when Priority Status is SAFE</li></ul>
+            <h3 data-i18n="p.rob.h">Robbery System</h3>
+            <p data-i18n="p.rob.p">Configurable timed robberies with trigger spots and zones. Every location can override the defaults.</p>
+            <ul class="project__features" data-i18n="p.rob.f"><li>Required item checked on the server</li><li>Minimum cops and doctors online per location</li><li>Police alerts, cooldowns and rewards</li><li>Cancel at any time with Backspace</li><li>Only starts when Priority Status is SAFE</li></ul>
             <ul class="card__tags"><li>VORP</li><li>vorp_inventory</li></ul>
           </article>
           <article class="card project reveal" data-tilt style="--delay:.05s">
             <p class="project__res">mavarne_prioritystatus</p>
-            <h3>Priority Status</h3>
-            <p>A server-wide priority status that law enforcement controls, so roleplay crime is paced fairly.</p>
-            <ul class="project__features"><li><code>/safe</code>, <code>/inprogress</code> and <code>/hold</code> commands</li><li>Law jobs or an ACE permission only; RCON and txAdmin can force a status</li><li>Live HUD badge that sits beside the money display</li><li>Server-wide announcement banner when the status changes</li><li>Exposes an export that gates mavarne_robbery</li></ul>
-            <ul class="card__tags"><li>VORP</li><li>ACE permissions</li></ul>
+            <h3 data-i18n="p.prio.h">Priority Status</h3>
+            <p data-i18n="p.prio.p">A server-wide priority status that law enforcement controls, so roleplay crime is paced fairly.</p>
+            <ul class="project__features" data-i18n="p.prio.f"><li><code>/safe</code>, <code>/inprogress</code> and <code>/hold</code> commands</li><li>Law jobs or an ACE permission only; RCON and txAdmin can force a status</li><li>Live HUD badge that sits beside the money display</li><li>Server-wide announcement banner when the status changes</li><li>Exposes an export that gates mavarne_robbery</li></ul>
+            <ul class="card__tags" data-i18n="p.prio.tags"><li>VORP</li><li>ACE permissions</li></ul>
           </article>
           <article class="card project reveal" data-tilt style="--delay:.1s">
             <p class="project__res">mavarne_sidejobs</p>
-            <h3>Side Jobs</h3>
-            <p>Four self-contained jobs in one resource, each in its own subfolder.</p>
-            <ul class="project__features"><li>Construction and lumberjack work</li><li>Cleaning job: random spots in a radius, a held broom prop, a progress bar, reputation and cash rewards</li><li>Illegal cargo: load crates onto a wagon and drive them to a random drop-off</li><li>Rewards validated on the server</li></ul>
+            <h3 data-i18n="p.side.h">Side Jobs</h3>
+            <p data-i18n="p.side.p">Four self-contained jobs in one resource, each in its own subfolder.</p>
+            <ul class="project__features" data-i18n="p.side.f"><li>Construction and lumberjack work</li><li>Cleaning job: random spots in a radius, a held broom prop, a progress bar, reputation and cash rewards</li><li>Illegal cargo: load crates onto a wagon and drive them to a random drop-off</li><li>Rewards validated on the server</li></ul>
             <ul class="card__tags"><li>VORP</li><li>qq-progressbar</li><li>NUI</li></ul>
           </article>
           <article class="card project reveal" data-tilt>
             <p class="project__res">mavarne_changename</p>
-            <h3>Character Name Change</h3>
-            <p>Players rename their character with a card item, the <code>/changename</code> command or an NPC clerk. No relog is needed.</p>
-            <ul class="project__features"><li>NUI form for first name, last name and nickname</li><li>Name validation, payment and a cooldown</li><li>Scoped to the active character, not every character on the account</li><li>Network event names randomised on every start</li><li>Optional Discord webhook log</li></ul>
+            <h3 data-i18n="p.name.h">Character Name Change</h3>
+            <p data-i18n="p.name.p">Players rename their character with a card item, the <code>/changename</code> command or an NPC clerk. No relog is needed.</p>
+            <ul class="project__features" data-i18n="p.name.f"><li>NUI form for first name, last name and nickname</li><li>Name validation, payment and a cooldown</li><li>Scoped to the active character, not every character on the account</li><li>Network event names randomised on every start</li><li>Optional Discord webhook log</li></ul>
             <ul class="card__tags"><li>VORP</li><li>oxmysql</li><li>Discord</li></ul>
           </article>
           <article class="card project reveal" data-tilt style="--delay:.1s">
             <p class="project__res">mavarne_propsattool</p>
-            <h3>Prop Attach Tool</h3>
-            <p>A developer tool for attaching props to character bones and copying the finished code.</p>
-            <ul class="project__features"><li>Spawn any prop and attach it to any bone</li><li>Position and rotation sliders with a live preview</li><li>Orbit camera and keyboard fine-nudging</li><li>Test the prop with any animation</li><li>Generates copy-paste <code>AttachEntityToEntity</code> code</li><li><code>/manim</code>: a searchable browser of every RDR3 animation with a 3D preview</li></ul>
-            <ul class="card__tags"><li>Standalone</li><li>Dev tool</li><li>NUI</li></ul>
+            <h3 data-i18n="p.prop.h">Prop Attach Tool</h3>
+            <p data-i18n="p.prop.p">A developer tool for attaching props to character bones and copying the finished code.</p>
+            <ul class="project__features" data-i18n="p.prop.f"><li>Spawn any prop and attach it to any bone</li><li>Position and rotation sliders with a live preview</li><li>Orbit camera and keyboard fine-nudging</li><li>Test the prop with any animation</li><li>Generates copy-paste <code>AttachEntityToEntity</code> code</li><li><code>/manim</code>: a searchable browser of every RDR3 animation with a 3D preview</li></ul>
+            <ul class="card__tags" data-i18n="p.prop.tags"><li>Standalone</li><li>Dev tool</li><li>NUI</li></ul>
           </article>
         </div>
       </div>
@@ -349,34 +355,34 @@
     <!-- ============ EXPERIENCE ============ -->
     <section class="section" id="experience">
       <div class="container">
-        <p class="kicker reveal">Career</p>
-        <h2 class="section__title reveal">Experience</h2>
+        <p class="kicker reveal" data-i18n="exp.kicker">Career</p>
+        <h2 class="section__title reveal" data-i18n="exp.title">Experience</h2>
 
         <ol class="timeline">
           <li class="timeline__item reveal">
-            <time>Mar 2026 — Present</time>
-            <h3>Service Crew <span>· Maféli Inc. (McDonald's), Québec City</span></h3>
-            <p>I take orders and payments on the POS, prepare food and serve the drive-thru in a high-volume restaurant, following food safety standards.</p>
+            <time data-i18n="exp.1.t">Mar 2026 — Present</time>
+            <h3 data-i18n="exp.1.h">Service Crew <span>· Maféli Inc. (McDonald's), Québec City</span></h3>
+            <p data-i18n="exp.1.p">I take orders and payments on the POS, prepare food and serve the drive-thru in a high-volume restaurant, following food safety standards.</p>
           </li>
           <li class="timeline__item reveal">
-            <time>Sep 2025 — Feb 2026</time>
-            <h3>Assistant Restaurant General Manager <span>· NBG Group (Pizza Hut), Québec City</span></h3>
-            <p>I ran daily operations, trained and supervised staff, and managed scheduling, labour costs, inventory and reporting to meet sales and profit targets.</p>
+            <time data-i18n="exp.2.t">Sep 2025 — Feb 2026</time>
+            <h3 data-i18n="exp.2.h">Assistant Restaurant General Manager <span>· NBG Group (Pizza Hut), Québec City</span></h3>
+            <p data-i18n="exp.2.p">I ran daily operations, trained and supervised staff, and managed scheduling, labour costs, inventory and reporting to meet sales and profit targets.</p>
           </li>
           <li class="timeline__item reveal">
-            <time>Feb 2025 — Aug 2025</time>
-            <h3>Overnight Associate <span>· Walmart, Québec City</span></h3>
-            <p>I prepared the sales floor for opening: unloading, merchandising, labelling, organising backroom bins and doing safety sweeps.</p>
+            <time data-i18n="exp.3.t">Feb 2025 — Aug 2025</time>
+            <h3 data-i18n="exp.3.h">Overnight Associate <span>· Walmart, Québec City</span></h3>
+            <p data-i18n="exp.3.p">I prepared the sales floor for opening: unloading, merchandising, labelling, organising backroom bins and doing safety sweeps.</p>
           </li>
           <li class="timeline__item reveal">
-            <time>Oct 2024 — Mar 2025</time>
-            <h3>Back of House <span>· Hemkund Development (Pizza Hut), Québec City</span></h3>
-            <p>I prepared food to brand standards, ran kitchen equipment, monitored inventory and kept the kitchen within sanitation rules.</p>
+            <time data-i18n="exp.4.t">Oct 2024 — Mar 2025</time>
+            <h3 data-i18n="exp.4.h">Back of House <span>· Hemkund Development (Pizza Hut), Québec City</span></h3>
+            <p data-i18n="exp.4.p">I prepared food to brand standards, ran kitchen equipment, monitored inventory and kept the kitchen within sanitation rules.</p>
           </li>
           <li class="timeline__item timeline__item--feature reveal">
-            <time>Sep 2016 — Aug 2024</time>
-            <h3>Technical Support <span>· PPI Holdings Inc. (Pizza Hut, Taco Bell, Dairy Queen), Quezon City</span></h3>
-            <ul>
+            <time data-i18n="exp.5.t">Sep 2016 — Aug 2024</time>
+            <h3 data-i18n="exp.5.h">Technical Support <span>· PPI Holdings Inc. (Pizza Hut, Taco Bell, Dairy Queen), Quezon City</span></h3>
+            <ul data-i18n="exp.5.list">
               <li>Set up and troubleshot POS systems across Taco Bell, Pizza Hut, Dairy Queen, Snaxx and Sachi.</li>
               <li>Migrated stores from Fenix to Cuscapi, from Cuscapi to Aloha, and from Aloha and Chase to ANSI POS.</li>
               <li>Designed and installed structured cabling and networks for stores and call centres, and configured the modems linking them.</li>
@@ -392,12 +398,12 @@
     <!-- ============ CREDENTIALS ============ -->
     <section class="section section--alt" id="credentials">
       <div class="container">
-        <p class="kicker reveal">Education &amp; training</p>
-        <h2 class="section__title reveal">Credentials</h2>
+        <p class="kicker reveal" data-i18n="cred.kicker">Education &amp; training</p>
+        <h2 class="section__title reveal" data-i18n="cred.title">Credentials</h2>
         <div class="creds">
           <article class="cred reveal" data-tilt>
             <time>2012 — 2016</time>
-            <h3>BS Information Technology</h3>
+            <h3 data-i18n="cred.bs">BS Information Technology</h3>
             <p>STI College Caloocan</p>
           </article>
           <article class="cred reveal" data-tilt style="--delay:.05s">
@@ -408,44 +414,44 @@
           <article class="cred reveal" data-tilt style="--delay:.1s">
             <time>2020</time>
             <h3>MCSA Windows Server 2016/2019</h3>
-            <p>Rivan School of Technology · Training certificate</p>
+            <p data-i18n="cred.mcsa">Rivan School of Technology · Training certificate</p>
           </article>
           <article class="cred reveal" data-tilt style="--delay:.15s">
             <time>2022</time>
             <h3>SMAW NC II</h3>
-            <p>TESDA · plus "Best in Set-Up Weld Equipment"</p>
+            <p data-i18n="cred.smaw">TESDA · plus "Best in Set-Up Weld Equipment"</p>
           </article>
           <article class="cred reveal" data-tilt style="--delay:.2s">
-            <time>Recognition</time>
-            <h3>Certificate of Recognition</h3>
+            <time data-i18n="cred.recog.t">Recognition</time>
+            <h3 data-i18n="cred.recog.h">Certificate of Recognition</h3>
             <p>PPI Holdings Inc. · "Maniacal Attitude"</p>
           </article>
           <article class="cred reveal" data-tilt style="--delay:.25s">
-            <time>Ongoing</time>
+            <time data-i18n="cred.cc.t">Ongoing</time>
             <h3>Codecademy</h3>
-            <p><a href="https://www.codecademy.com/profiles/arjaygalpo" target="_blank" rel="noopener">View my learning profile ↗</a></p>
+            <p><a href="https://www.codecademy.com/profiles/arjaygalpo" target="_blank" rel="noopener" data-i18n="cred.cc.link">View my learning profile ↗</a></p>
           </article>
         </div>
 
-        <p class="projects__label reveal creds__label">Languages</p>
+        <p class="projects__label reveal creds__label" data-i18n="lang.label">Languages</p>
         <div class="creds">
           <article class="cred reveal" data-tilt>
-            <time>Native</time>
-            <h3>Tagalog</h3>
-            <div class="lang-meter" role="img" aria-label="Native, 5 out of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
-            <p>First language</p>
+            <time data-i18n="lang.tl.t">Native</time>
+            <h3 data-i18n="lang.tl.h">Tagalog</h3>
+            <div class="lang-meter" role="img" aria-label="Native, 5 out of 5" data-i18n-attr="aria-label:lang.tl.aria"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
+            <p data-i18n="lang.tl.p">First language</p>
           </article>
           <article class="cred reveal" data-tilt style="--delay:.05s">
-            <time>Fluent</time>
-            <h3>English</h3>
-            <div class="lang-meter" role="img" aria-label="Fluent, 4 out of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
-            <p>Work, support and documentation</p>
+            <time data-i18n="lang.en.t">Fluent</time>
+            <h3 data-i18n="lang.en.h">English</h3>
+            <div class="lang-meter" role="img" aria-label="Fluent, 4 out of 5" data-i18n-attr="aria-label:lang.en.aria"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+            <p data-i18n="lang.en.p">Work, support and documentation</p>
           </article>
           <article class="cred reveal" data-tilt style="--delay:.1s">
-            <time>Level 3 · Beginner</time>
-            <h3>French</h3>
-            <div class="lang-meter" role="img" aria-label="Beginner, 2 out of 5"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div>
-            <p>I can hold a simple conversation and I'm still learning</p>
+            <time data-i18n="lang.fr.t">Level 3 · Beginner</time>
+            <h3 data-i18n="lang.fr.h">French</h3>
+            <div class="lang-meter" role="img" aria-label="Beginner, 2 out of 5" data-i18n-attr="aria-label:lang.fr.aria"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div>
+            <p data-i18n="lang.fr.p">I can hold a simple conversation and I'm still learning</p>
           </article>
         </div>
       </div>
@@ -454,9 +460,9 @@
     <!-- ============ CONTACT ============ -->
     <section class="section contact" id="contact">
       <div class="container contact__inner reveal">
-        <p class="kicker">Contact</p>
-        <h2 class="section__title">Let's keep your systems running.</h2>
-        <p class="contact__lead">I'm open to IT support, systems and web development work in Québec City or remotely.</p>
+        <p class="kicker" data-i18n="nav.contact">Contact</p>
+        <h2 class="section__title" data-i18n="contact.title">Let's keep your systems running.</h2>
+        <p class="contact__lead" data-i18n="contact.lead">I'm open to IT support, systems and web development work in Québec City or remotely.</p>
         <div class="hero__actions contact__actions">
           <a class="btn btn--primary" href="mailto:arjaygalpo010196@gmail.com">arjaygalpo010196@gmail.com</a>
           <a class="btn btn--ghost" href="https://www.codecademy.com/profiles/arjaygalpo" target="_blank" rel="noopener">Codecademy ↗</a>
@@ -466,9 +472,10 @@
   </main>
 
   <footer class="footer">
-    <div class="container">© <span id="year">2026</span> Arjay Galpo · Québec City</div>
+    <div class="container">© <span id="year">2026</span> Arjay Galpo · <span data-i18n="footer.city">Québec City</span></div>
   </footer>
 
+  <script src="assets/js/i18n.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>

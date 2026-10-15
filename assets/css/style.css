@@ -72,6 +72,21 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 .nav__links a:hover { color: var(--text); background: var(--surface-2); }
 .nav__links .nav__cta { color: var(--text); border: 1px solid var(--border-strong); }
+.nav__right { display: flex; align-items: center; gap: 10px; }
+
+/* Language toggle: segmented EN / FR pill */
+.lang {
+  display: inline-flex; padding: 3px; gap: 2px;
+  border: 1px solid var(--border-strong); border-radius: 999px;
+  background: var(--surface);
+}
+.lang__btn {
+  appearance: none; border: 0; background: none; cursor: pointer;
+  font: 500 12px var(--font-mono); letter-spacing: .06em; color: var(--muted);
+  padding: 6px 10px; border-radius: 999px; transition: color .2s, background .2s;
+}
+.lang__btn:hover { color: var(--text); }
+.lang__btn[aria-pressed="true"] { color: var(--bg); background: var(--green); }
 
 /* ---------- Buttons ---------- */
 .btn {
