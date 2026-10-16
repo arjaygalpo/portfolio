@@ -93,6 +93,52 @@
     });
   }
 
+  /* ---------- Videos: lazy-loaded, paused off-screen, removed if the file is missing ---------- */
+  const saveData = !!(navigator.connection && navigator.connection.saveData);
+  const ext = document.createElement('video').canPlayType('video/webm; codecs="vp9"') ? 'webm' : 'mp4';
+  const load = (v) => { if (!v.getAttribute('src')) v.src = `${v.dataset.video}.${ext}`; };
+  const play = (v) => { load(v); const p = v.play(); if (p) p.catch(() => {}); };
+  const onView = (el, cb, threshold = 0) => {
+    if (!('IntersectionObserver' in window)) return cb(true);
+    new IntersectionObserver(([e]) => cb(e.isIntersecting), { threshold }).observe(el);
+  };
+
+  $$('video[data-video]').forEach((v) => {
+    const trailer = v.closest('.trailer');
+    const card = v.closest('.card');
+    v.addEventListener('loadeddata', () => v.classList.add('is-ready'), { once: true });
+    v.addEventListener('error', () => {
+      if (card) card.classList.remove('has-video', 'is-playing');
+      (trailer || v).remove();
+    }, { once: true });
+
+    if (trailer) {
+      // Muted autoplay while in view; reduced-motion visitors get the poster and press play themselves
+      onView(trailer, (on) => {
+        if (reducedMotion) { load(v); return; }
+        if (on) play(v); else v.pause();
+      }, 0.4);
+      return;
+    }
+    if (reducedMotion || saveData) { v.remove(); return; }
+
+    if (card) {
+      card.classList.add('has-video');
+      const set = (on) => {
+        card.classList.toggle('is-playing', on);
+        if (on) play(v); else v.pause();
+      };
+      if (finePointer) {
+        card.addEventListener('pointerenter', () => set(true));
+        card.addEventListener('pointerleave', () => set(false));
+      } else {
+        onView(card, set, 0.6); // touch: play the card that's on screen
+      }
+      return;
+    }
+    onView(v.parentElement, (on) => { if (on && !document.hidden) play(v); else v.pause(); });
+  });
+
   /* ---------- Particle network behind the hero ---------- */
   const canvas = $('#particles');
   const ctx = canvas.getContext('2d');

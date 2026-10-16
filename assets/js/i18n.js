@@ -73,6 +73,7 @@
     'redm.lead': "Une suite de ressources RedM que j'écris et maintiens sous le nom Mavarne, basée sur VORP Core avec Lua, oxmysql et des interfaces NUI personnalisées. Elles sont conçues pour fonctionner ensemble : Priority Status contrôle les vols, et les scripts de jeu partagent la même barre de progression et le même style de notifications.",
     'redm.featured': 'En vedette',
     'redm.more': 'Autres scripts',
+    'redm.trailer': 'Bande-annonce des scripts RedM Mavarne',
 
     'p.cock.h': 'Arènes de combats de coqs',
     'p.cock.p': 'Élevez, entraînez et faites se reproduire des coqs, puis affrontez d\'autres joueurs en JcJ avec mises et paris des spectateurs. Le serveur décide de chaque combat, pari, gain et résultat de reproduction.',
