@@ -372,40 +372,25 @@
         <p class="kicker reveal" data-i18n="exp.kicker">Career</p>
         <h2 class="section__title reveal" data-i18n="exp.title">Experience</h2>
 
-        <ol class="timeline">
-          <li class="timeline__item reveal">
-            <time data-i18n="exp.1.t">Mar 2026 — Present</time>
-            <h3 data-i18n="exp.1.h">Service Crew <span>· Maféli Inc. (McDonald's), Québec City</span></h3>
-            <p data-i18n="exp.1.p">I take orders and payments on the POS, prepare food and serve the drive-thru in a high-volume restaurant, following food safety standards.</p>
-          </li>
-          <li class="timeline__item reveal">
-            <time data-i18n="exp.2.t">Sep 2025 — Feb 2026</time>
-            <h3 data-i18n="exp.2.h">Assistant Restaurant General Manager <span>· NBG Group (Pizza Hut), Québec City</span></h3>
-            <p data-i18n="exp.2.p">I ran daily operations, trained and supervised staff, and managed scheduling, labour costs, inventory and reporting to meet sales and profit targets.</p>
-          </li>
-          <li class="timeline__item reveal">
-            <time data-i18n="exp.3.t">Feb 2025 — Aug 2025</time>
-            <h3 data-i18n="exp.3.h">Overnight Associate <span>· Walmart, Québec City</span></h3>
-            <p data-i18n="exp.3.p">I prepared the sales floor for opening: unloading, merchandising, labelling, organising backroom bins and doing safety sweeps.</p>
-          </li>
-          <li class="timeline__item reveal">
-            <time data-i18n="exp.4.t">Oct 2024 — Mar 2025</time>
-            <h3 data-i18n="exp.4.h">Back of House <span>· Hemkund Development (Pizza Hut), Québec City</span></h3>
-            <p data-i18n="exp.4.p">I prepared food to brand standards, ran kitchen equipment, monitored inventory and kept the kitchen within sanitation rules.</p>
-          </li>
-          <li class="timeline__item timeline__item--feature reveal">
-            <time data-i18n="exp.5.t">Sep 2016 — Aug 2024</time>
-            <h3 data-i18n="exp.5.h">Technical Support <span>· PPI Holdings Inc. (Pizza Hut, Taco Bell, Dairy Queen), Quezon City</span></h3>
-            <ul data-i18n="exp.5.list">
-              <li>Set up and troubleshot POS systems across Taco Bell, Pizza Hut, Dairy Queen, Snaxx and Sachi.</li>
-              <li>Migrated stores from Fenix to Cuscapi, from Cuscapi to Aloha, and from Aloha and Chase to ANSI POS.</li>
-              <li>Designed and installed structured cabling and networks for stores and call centres, and configured the modems linking them.</li>
-              <li>Built Windows servers for data and call centres and kept daily backups running. Maintained servers and POS to minimise downtime.</li>
-              <li>Installed and maintained Avaya and analog PABX telephony, CCTV, HRIS biometrics, ticketing and door-lock systems.</li>
-              <li>Supported end-user PCs and IT assets, and delivered the full IT fit-out for new store openings.</li>
-            </ul>
-          </li>
-        </ol>
+        <div class="vault" id="careerVault">
+          <ol class="timeline vault__blur" aria-hidden="true" inert>
+            <li class="timeline__item"><time>████ ████ — ███████</time><h3>████████ ████ <span>· ████████ ███, ██████</span></h3><p>███ ██████ ████ ███ ████████ ██ ███ ███, ███████ ████ ███ █████ ███ █████-████ ██ █ ████-██████ ██████████.</p></li>
+            <li class="timeline__item"><time>████ ████ — ████ ████</time><h3>█████████ ██████████ ███████ <span>· ███ █████ (█████ ███), ██████</span></h3><p>█ ███ █████ ██████████, ███████ ███ ██████████ █████, ███ ███████ ██████████, ██████ █████, █████████ ███ █████████.</p></li>
+            <li class="timeline__item"><time>████ ████ — ████ ████</time><h3>█████████ █████████ <span>· ███████, ██████</span></h3><p>█ ████████ ███ █████ █████ ███ ███████: █████████, ████████████, █████████ ███ ██████ ██████.</p></li>
+            <li class="timeline__item timeline__item--feature"><time>████ ████ — ████ ████</time><h3>█████████ ███████ <span>· ███ ████████ ████</span></h3><ul><li>███ ██ ███ ███████████ ███ ███████ ██████ ████ ████.</li><li>████████ ██████ ████ █████ ██ ███████ ███ ████ ██████.</li><li>████████ ███ █████████ ██████████ ███████ ███ ████████.</li></ul></li>
+          </ol>
+          <form class="vault__lock reveal" id="careerLock" autocomplete="off" novalidate>
+            <div class="vault__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10.5" width="16" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg></div>
+            <h3 data-i18n="lock.title">Protected section</h3>
+            <p data-i18n="lock.p">My work history is private. Enter the password to view it.</p>
+            <label class="sr-only" for="careerPw" data-i18n="lock.label">Password</label>
+            <div class="vault__row">
+              <input id="careerPw" type="password" placeholder="Password" data-i18n-attr="placeholder:lock.label" autocomplete="off" spellcheck="false" required>
+              <button class="btn btn--primary" type="submit" data-i18n="lock.btn">Unlock</button>
+            </div>
+            <p class="vault__err" id="careerErr" role="alert" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
     </section>
 
@@ -491,6 +476,8 @@
   </footer>
 
   <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/career-vault.js" defer></script>
+  <script src="assets/js/career-lock.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>

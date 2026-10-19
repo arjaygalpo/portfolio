@@ -108,21 +108,12 @@
 
     'exp.kicker': 'Parcours',
     'exp.title': 'Expérience',
-    'exp.1.t': "Mars 2026 — Aujourd'hui",
-    'exp.1.h': "Équipier <span>· Maféli Inc. (McDonald's), Québec</span>",
-    'exp.1.p': "Je prends les commandes et les paiements au PDV, je prépare les aliments et je sers au service à l'auto dans un restaurant à fort achalandage, en respectant les normes de salubrité alimentaire.",
-    'exp.2.t': 'Sept. 2025 — Févr. 2026',
-    'exp.2.h': 'Directeur général adjoint de restaurant <span>· NBG Group (Pizza Hut), Québec</span>',
-    'exp.2.p': "J'ai dirigé les opérations quotidiennes, formé et supervisé le personnel, et géré les horaires, les coûts de main-d'œuvre, l'inventaire et les rapports afin d'atteindre les objectifs de ventes et de rentabilité.",
-    'exp.3.t': 'Févr. 2025 — Août 2025',
-    'exp.3.h': 'Associé de nuit <span>· Walmart, Québec</span>',
-    'exp.3.p': "Je préparais le plancher de vente pour l'ouverture : déchargement, marchandisage, étiquetage, organisation des bacs de l'arrière-boutique et rondes de sécurité.",
-    'exp.4.t': 'Oct. 2024 — Mars 2025',
-    'exp.4.h': 'Cuisine <span>· Hemkund Development (Pizza Hut), Québec</span>',
-    'exp.4.p': "Je préparais les aliments selon les normes de la marque, j'utilisais l'équipement de cuisine, je surveillais l'inventaire et je maintenais la cuisine conforme aux règles d'hygiène.",
-    'exp.5.t': 'Sept. 2016 — Août 2024',
-    'exp.5.h': 'Soutien technique <span>· PPI Holdings Inc. (Pizza Hut, Taco Bell, Dairy Queen), Quezon City</span>',
-    'exp.5.list': "<li>Installation et dépannage de systèmes PDV pour Taco Bell, Pizza Hut, Dairy Queen, Snaxx et Sachi.</li><li>Migration des magasins de Fenix vers Cuscapi, de Cuscapi vers Aloha, puis d'Aloha et Chase vers ANSI POS.</li><li>Conception et installation du câblage structuré et des réseaux pour les magasins et les centres d'appels, et configuration des modems qui les relient.</li><li>Mise en place de serveurs Windows pour les centres de données et d'appels, avec sauvegardes quotidiennes. Entretien des serveurs et des PDV pour réduire les temps d'arrêt.</li><li>Installation et entretien de la téléphonie Avaya et PABX analogique, de la vidéosurveillance, de la biométrie RH, de la billetterie et des serrures électroniques.</li><li>Soutien des postes de travail et des actifs informatiques, et mise en place informatique complète pour les ouvertures de nouveaux magasins.</li>",
+    'lock.title': 'Section protégée',
+    'lock.p': 'Mon parcours professionnel est privé. Entrez le mot de passe pour le consulter.',
+    'lock.label': 'Mot de passe',
+    'lock.btn': 'Déverrouiller',
+    'lock.err': 'Mot de passe incorrect. Réessayez.',
+    'lock.busy': 'Vérification…',
 
     'cred.kicker': 'Études et formation',
     'cred.title': 'Formation',
@@ -188,6 +179,17 @@
     document.querySelectorAll('.lang__btn').forEach((b) => {
       b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
     });
+  };
+
+  // Lets content injected later (e.g. the unlocked Career section) join translation
+  window.siteI18n = {
+    add(root, extraFr = {}) {
+      Object.assign(FR, extraFr);
+      root.querySelectorAll('[data-i18n]').forEach((el) => {
+        if (!EN_TEXT.has(el)) { textEls.push(el); EN_TEXT.set(el, el.innerHTML); }
+      });
+      apply(document.documentElement.lang === 'fr' ? 'fr' : 'en');
+    },
   };
 
   // Priority: ?lang= in the URL, then saved choice, then browser language
