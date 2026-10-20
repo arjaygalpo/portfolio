@@ -33,15 +33,11 @@
 
     'profile.title': 'Professionnel des TI et développeur',
     'profile.based': '<span>Lieu</span> Québec, Canada',
-    'profile.degree': '<span>Diplôme</span> B. Sc. en technologies de l\'information',
     'profile.focus': '<span>Domaines</span> Systèmes · PDV · Web · IA',
     'profile.langs': '<span>Langues</span> Tagalog · Anglais · Français',
 
     'about.kicker': 'À propos de moi',
     'about.title': 'Des TI concrètes, de la salle des serveurs au plancher de vente.',
-    'about.p1': "Je suis titulaire d'un <strong>baccalauréat en sciences des technologies de l'information</strong> du STI College Caloocan. De 2016 à 2024, j'ai été spécialiste en <strong>soutien technique</strong> chez <strong>PPI Holdings Inc.</strong>, qui exploite Pizza Hut, Taco Bell et Dairy Queen aux Philippines. Mon rôle était d'assurer le bon fonctionnement des magasins, des centres d'appels et des centres de données.",
-    'about.p2': "J'ai installé et dépanné des systèmes PDV pour cinq marques et dirigé les migrations de Fenix vers Cuscapi, de Cuscapi vers Aloha, puis d'Aloha et Chase vers ANSI. J'ai aussi installé du câblage structuré, monté des serveurs Windows avec sauvegardes quotidiennes et entretenu la téléphonie Avaya et PABX, la vidéosurveillance, le système RH biométrique et les serrures électroniques. Pour les ouvertures de nouveaux magasins, je m'occupais de toute la mise en place informatique.",
-    'about.p3': "Depuis mon arrivée à Québec, j'ai travaillé en restauration et en commerce de détail, notamment comme directeur général adjoint de restaurant. Cette expérience m'a montré comment les systèmes que je soutenais tiennent le coup pendant un service achalandé. En parallèle, je développe avec <strong>PHP, JavaScript, MySQL et Lua</strong>; je suis développeur FiveM depuis 2019 et j'ai ajouté des serveurs de jeu RedM en 2025. Je travaille aussi comme <strong>ingénieur IA</strong>, en reliant de grands modèles de langage à de vrais outils d'affaires : assistants conversationnels, flux de soutien automatisés et fonctionnalités basées sur des API d'IA.",
     'about.tags': '<li>Windows Server et VMware</li><li>Réseautique</li><li>Systèmes PDV</li><li>Vidéosurveillance et sécurité</li><li>PHP / MySQL</li><li>Lua</li><li>Intégration IA / LLM</li>',
 
     'work.kicker': 'Ce que je fais',
@@ -109,21 +105,13 @@
     'exp.kicker': 'Parcours',
     'exp.title': 'Expérience',
     'lock.title': 'Section protégée',
-    'lock.p': 'Mon parcours professionnel est privé. Entrez le mot de passe pour le consulter.',
+    'lock.p': 'Ces renseignements sont privés. Entrez le mot de passe pour les consulter.',
     'lock.label': 'Mot de passe',
     'lock.btn': 'Déverrouiller',
-    'lock.err': 'Mot de passe incorrect. Réessayez.',
-    'lock.busy': 'Vérification…',
+    'profile.degree.locked': '<span>Diplôme</span> <b class="vault__blurtext" aria-label="Masqué">████ ███████████ ██████████</b>',
 
     'cred.kicker': 'Études et formation',
     'cred.title': 'Formation',
-    'cred.bs': "B. Sc. en technologies de l'information",
-    'cred.mcsa': 'Rivan School of Technology · Certificat de formation',
-    'cred.smaw': 'TESDA · et prix « Best in Set-Up Weld Equipment »',
-    'cred.recog.t': 'Reconnaissance',
-    'cred.recog.h': 'Certificat de reconnaissance',
-    'cred.cc.t': 'En cours',
-    'cred.cc.link': "Voir mon profil d'apprentissage ↗",
 
     'lang.label': 'Langues',
     'lang.tl.t': 'Langue maternelle',
@@ -181,12 +169,15 @@
     });
   };
 
-  // Lets content injected later (e.g. the unlocked Career section) join translation
+  // Lets content injected later (the unlocked private sections) join translation
   window.siteI18n = {
-    add(root, extraFr = {}) {
+    add(roots, extraFr = {}) {
       Object.assign(FR, extraFr);
-      root.querySelectorAll('[data-i18n]').forEach((el) => {
-        if (!EN_TEXT.has(el)) { textEls.push(el); EN_TEXT.set(el, el.innerHTML); }
+      roots.forEach((root) => {
+        const els = root.matches('[data-i18n]') ? [root, ...root.querySelectorAll('[data-i18n]')] : [...root.querySelectorAll('[data-i18n]')];
+        els.forEach((el) => {
+          if (!EN_TEXT.has(el)) { textEls.push(el); EN_TEXT.set(el, el.innerHTML); }
+        });
       });
       apply(document.documentElement.lang === 'fr' ? 'fr' : 'en');
     },

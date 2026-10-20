@@ -516,22 +516,23 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .chip { opacity: 1; }
 }
 
-/* ============ Career lock ============ */
-.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+/* ============ Private sections (password lock) ============ */
 .vault { position: relative; max-width: 880px; }
 .vault__blur { filter: blur(9px); opacity: .55; user-select: none; pointer-events: none; }
+.about__blur p { color: var(--muted); font-size: 17px; word-break: break-all; }
+.vault--about { min-height: 300px; }
 .vault__lock {
   position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
-  width: min(440px, 100%); padding: 30px 28px; text-align: center;
+  width: min(440px, 100%); padding: 28px 26px; text-align: center;
   background: rgba(12, 16, 21, .82); border: 1px solid var(--border-strong); border-radius: var(--radius);
   backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 30px 80px -30px rgba(0, 0, 0, .8);
 }
 .js .vault__lock.reveal { transform: translate(-50%, calc(-50% + 28px)); }
 .js .vault__lock.reveal.is-in { transform: translate(-50%, -50%); }
-.vault__icon { display: grid; place-items: center; width: 52px; height: 52px; margin: 0 auto 14px; border-radius: 14px; color: var(--green); background: var(--green-soft); }
+.vault__icon { display: grid; place-items: center; width: 48px; height: 48px; margin: 0 auto 12px; border-radius: 14px; color: var(--green); background: var(--green-soft); }
 .vault__lock h3 { font-size: 20px; margin: 0 0 6px; }
-.vault__lock > p { color: var(--muted); font-size: 14px; margin: 0 0 18px; }
+.vault__lock > p { color: var(--muted); font-size: 14px; margin: 0 0 16px; }
 .vault__row { display: flex; gap: 10px; }
 .vault__row input {
   flex: 1; min-width: 0; padding: 12px 14px; border-radius: 12px;
@@ -544,7 +545,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .vault__err { min-height: 1.2em; margin: 8px 0 -6px; font-size: 13px; color: var(--red); }
 .vault__lock.is-shake { animation: vault-shake .4s; }
 @keyframes vault-shake { 20%, 60% { margin-left: -8px; } 40%, 80% { margin-left: 8px; } }
+.vault__blurtext { font-weight: inherit; filter: blur(5px); opacity: .6; user-select: none; }
 @media (max-width: 520px) {
-  .vault__lock { padding: 24px 18px; }
+  .vault__lock { padding: 22px 18px; }
   .vault__row { flex-direction: column; }
 }

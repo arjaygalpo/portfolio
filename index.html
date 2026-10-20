@@ -141,7 +141,7 @@
             <p class="profile-card__title" data-i18n="profile.title">IT Professional &amp; Developer</p>
             <ul class="profile-card__facts">
               <li data-i18n="profile.based"><span>Based in</span> Québec City, Canada</li>
-              <li data-i18n="profile.degree"><span>Degree</span> BS Information Technology</li>
+              <li data-vault="degree" data-i18n="profile.degree.locked"><span>Degree</span> <b class="vault__blurtext" aria-label="Hidden">██ ███████████ ██████████</b></li>
               <li data-i18n="profile.focus"><span>Focus</span> Systems · POS · Web · AI</li>
               <li data-i18n="profile.langs"><span>Languages</span> Tagalog · English · French</li>
             </ul>
@@ -151,27 +151,18 @@
         <div class="about__text">
           <p class="kicker reveal" data-i18n="about.kicker">About me</p>
           <h2 class="section__title reveal" data-i18n="about.title">Hands-on IT, from server room to sales floor.</h2>
-          <div class="reveal">
-            <p data-i18n="about.p1">
-              I hold a <strong>Bachelor of Science in Information Technology</strong> from STI College Caloocan.
-              From 2016 to 2024 I was a <strong>Technical Support</strong> specialist at
-              <strong>PPI Holdings Inc.</strong>, which operates Pizza Hut, Taco Bell and Dairy Queen in the Philippines.
-              My job was to keep stores, call centres and data centres running.
-            </p>
-            <p data-i18n="about.p2">
-              I set up and troubleshot POS systems across five brands and led migrations from
-              Fenix to Cuscapi, from Cuscapi to Aloha, and from Aloha and Chase to ANSI.
-              I also installed structured cabling, built Windows servers with daily backups, and maintained
-              Avaya and PABX telephony, CCTV, biometric HRIS and door-lock systems.
-              For new store openings, I handled the full IT setup.
-            </p>
-            <p data-i18n="about.p3">
-              Since moving to Québec City, I've worked in restaurant and retail operations, including as
-              Assistant Restaurant General Manager. That work taught me how the systems I used to support
-              hold up during a busy shift. In parallel I build with
-              <strong>PHP, JavaScript, MySQL and Lua</strong>, and I have been a FiveM developer since 2019, adding RedM game servers in 2025. I also work as an
-              <strong>AI engineer</strong>, connecting large language models to real business tools: chat assistants, automated support workflows, and features built on AI APIs.
-            </p>
+          <div class="vault vault--about" data-vault="about">
+            <div class="vault__blur about__blur" aria-hidden="true" inert><p>███ ████ ██ ████████ █████ ███ ██████ █████████ ██ ████ ███████ ███ █████ ████████ ████ ██████ ███ ███████ █████ ██ █████████ ████</p><p>███ ████ ██ ████████ █████ ███ ██████ █████████ ██ ████ ███████ ███ █████ ████████ ████ ██████ ███ ███████ █████ ██ █████████ ████</p><p>███ ████ ██ ████████ █████ ███ ██████ █████████ ██ ████ ███████ ███ █████ ████████ ████ ██████ ███ ███████ █████ ██ █████████ ████</p></div>
+            <form class="vault__lock reveal vault__lock--compact" autocomplete="off" novalidate>
+            <div class="vault__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10.5" width="16" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg></div>
+            <h3 data-i18n="lock.title">Protected section</h3>
+            <p data-i18n="lock.p">This information is private. Enter the password to view it.</p>
+            <div class="vault__row">
+              <input type="password" placeholder="Password" aria-label="Password" data-i18n-attr="placeholder:lock.label,aria-label:lock.label" autocomplete="off" spellcheck="false" required>
+              <button class="btn btn--primary" type="submit" data-i18n="lock.btn">Unlock</button>
+            </div>
+            <p class="vault__err" role="alert" aria-live="polite"></p>
+          </form>
           </div>
           <ul class="tags reveal" data-i18n="about.tags">
             <li>Windows Server &amp; VMware</li><li>Networking</li><li>POS Systems</li>
@@ -372,23 +363,22 @@
         <p class="kicker reveal" data-i18n="exp.kicker">Career</p>
         <h2 class="section__title reveal" data-i18n="exp.title">Experience</h2>
 
-        <div class="vault" id="careerVault">
+        <div class="vault" data-vault="career">
           <ol class="timeline vault__blur" aria-hidden="true" inert>
-            <li class="timeline__item"><time>████ ████ — ███████</time><h3>████████ ████ <span>· ████████ ███, ██████</span></h3><p>███ ██████ ████ ███ ████████ ██ ███ ███, ███████ ████ ███ █████ ███ █████-████ ██ █ ████-██████ ██████████.</p></li>
-            <li class="timeline__item"><time>████ ████ — ████ ████</time><h3>█████████ ██████████ ███████ <span>· ███ █████ (█████ ███), ██████</span></h3><p>█ ███ █████ ██████████, ███████ ███ ██████████ █████, ███ ███████ ██████████, ██████ █████, █████████ ███ █████████.</p></li>
-            <li class="timeline__item"><time>████ ████ — ████ ████</time><h3>█████████ █████████ <span>· ███████, ██████</span></h3><p>█ ████████ ███ █████ █████ ███ ███████: █████████, ████████████, █████████ ███ ██████ ██████.</p></li>
-            <li class="timeline__item timeline__item--feature"><time>████ ████ — ████ ████</time><h3>█████████ ███████ <span>· ███ ████████ ████</span></h3><ul><li>███ ██ ███ ███████████ ███ ███████ ██████ ████ ████.</li><li>████████ ██████ ████ █████ ██ ███████ ███ ████ ██████.</li><li>████████ ███ █████████ ██████████ ███████ ███ ████████.</li></ul></li>
+            <li class="timeline__item"><time>████ ████ — ███████</time><h3>████████ ████ <span>· ████████ ███, ██████</span></h3><p>███ ██████ ████ ███ ████████ ██ ███ ███, ███████ ████ ███ █████ ███ █████-████.</p></li>
+            <li class="timeline__item"><time>████ ████ — ████ ████</time><h3>█████████ ██████████ ███████ <span>· ███ █████, ██████</span></h3><p>█ ███ █████ ██████████, ███████ ███ ██████████ █████, ███ ███████ ██████████.</p></li>
+            <li class="timeline__item"><time>████ ████ — ████ ████</time><h3>█████████ █████████ <span>· ███████, ██████</span></h3><p>█ ████████ ███ █████ █████ ███ ███████: █████████, ████████████, █████████.</p></li>
+            <li class="timeline__item timeline__item--feature"><time>████ ████ — ████ ████</time><h3>█████████ ███████ <span>· ███ ████████ ████</span></h3><ul><li>███ ██ ███ ███████████ ███ ███████ ██████.</li><li>████████ ██████ ████ █████ ██ ███████.</li><li>████████ ███ █████████ ██████████ ███████.</li></ul></li>
           </ol>
-          <form class="vault__lock reveal" id="careerLock" autocomplete="off" novalidate>
-            <div class="vault__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10.5" width="16" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg></div>
+          <form class="vault__lock reveal" autocomplete="off" novalidate>
+            <div class="vault__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10.5" width="16" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg></div>
             <h3 data-i18n="lock.title">Protected section</h3>
-            <p data-i18n="lock.p">My work history is private. Enter the password to view it.</p>
-            <label class="sr-only" for="careerPw" data-i18n="lock.label">Password</label>
+            <p data-i18n="lock.p">This information is private. Enter the password to view it.</p>
             <div class="vault__row">
-              <input id="careerPw" type="password" placeholder="Password" data-i18n-attr="placeholder:lock.label" autocomplete="off" spellcheck="false" required>
+              <input type="password" placeholder="Password" aria-label="Password" data-i18n-attr="placeholder:lock.label,aria-label:lock.label" autocomplete="off" spellcheck="false" required>
               <button class="btn btn--primary" type="submit" data-i18n="lock.btn">Unlock</button>
             </div>
-            <p class="vault__err" id="careerErr" role="alert" aria-live="polite"></p>
+            <p class="vault__err" role="alert" aria-live="polite"></p>
           </form>
         </div>
       </div>
@@ -399,37 +389,18 @@
       <div class="container">
         <p class="kicker reveal" data-i18n="cred.kicker">Education &amp; training</p>
         <h2 class="section__title reveal" data-i18n="cred.title">Credentials</h2>
-        <div class="creds">
-          <article class="cred reveal" data-tilt>
-            <time>2012 — 2016</time>
-            <h3 data-i18n="cred.bs">BS Information Technology</h3>
-            <p>STI College Caloocan</p>
-          </article>
-          <article class="cred reveal" data-tilt style="--delay:.05s">
-            <time>2016</time>
-            <h3>Computer System Servicing NC II</h3>
-            <p>Asian College of Science &amp; Technology · TESDA</p>
-          </article>
-          <article class="cred reveal" data-tilt style="--delay:.1s">
-            <time>2020</time>
-            <h3>MCSA Windows Server 2016/2019</h3>
-            <p data-i18n="cred.mcsa">Rivan School of Technology · Training certificate</p>
-          </article>
-          <article class="cred reveal" data-tilt style="--delay:.15s">
-            <time>2022</time>
-            <h3>SMAW NC II</h3>
-            <p data-i18n="cred.smaw">TESDA · plus "Best in Set-Up Weld Equipment"</p>
-          </article>
-          <article class="cred reveal" data-tilt style="--delay:.2s">
-            <time data-i18n="cred.recog.t">Recognition</time>
-            <h3 data-i18n="cred.recog.h">Certificate of Recognition</h3>
-            <p>PPI Holdings Inc. · "Maniacal Attitude"</p>
-          </article>
-          <article class="cred reveal" data-tilt style="--delay:.25s">
-            <time data-i18n="cred.cc.t">Ongoing</time>
-            <h3>Codecademy</h3>
-            <p><a href="https://www.codecademy.com/profiles/arjaygalpo" target="_blank" rel="noopener" data-i18n="cred.cc.link">View my learning profile ↗</a></p>
-          </article>
+        <div class="vault" data-vault="creds">
+          <div class="creds vault__blur" aria-hidden="true" inert><article class="cred"><time>████ — ████</time><h3>████████ ██████ █████</h3><p>█████ ███████ · ██████</p></article><article class="cred"><time>████ — ████</time><h3>████████ ██████ █████</h3><p>█████ ███████ · ██████</p></article><article class="cred"><time>████ — ████</time><h3>████████ ██████ █████</h3><p>█████ ███████ · ██████</p></article><article class="cred"><time>████ — ████</time><h3>████████ ██████ █████</h3><p>█████ ███████ · ██████</p></article><article class="cred"><time>████ — ████</time><h3>████████ ██████ █████</h3><p>█████ ███████ · ██████</p></article><article class="cred"><time>████ — ████</time><h3>████████ ██████ █████</h3><p>█████ ███████ · ██████</p></article></div>
+          <form class="vault__lock reveal" autocomplete="off" novalidate>
+            <div class="vault__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10.5" width="16" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg></div>
+            <h3 data-i18n="lock.title">Protected section</h3>
+            <p data-i18n="lock.p">This information is private. Enter the password to view it.</p>
+            <div class="vault__row">
+              <input type="password" placeholder="Password" aria-label="Password" data-i18n-attr="placeholder:lock.label,aria-label:lock.label" autocomplete="off" spellcheck="false" required>
+              <button class="btn btn--primary" type="submit" data-i18n="lock.btn">Unlock</button>
+            </div>
+            <p class="vault__err" role="alert" aria-live="polite"></p>
+          </form>
         </div>
 
         <p class="projects__label reveal creds__label" data-i18n="lang.label">Languages</p>
@@ -464,7 +435,7 @@
         <h2 class="section__title" data-i18n="contact.title">Let's keep your systems running.</h2>
         <p class="contact__lead" data-i18n="contact.lead">I'm open to IT support, systems and web development work in Québec City or remotely.</p>
         <div class="hero__actions contact__actions">
-          <a class="btn btn--primary" href="mailto:arjaygalpo010196@gmail.com">arjaygalpo010196@gmail.com</a>
+          <a class="btn btn--primary" data-mail="bW9jLmxpYW1nQDY5MTAxMG9wbGFneWFqcmE=" href="#contact">Email me</a>
           <a class="btn btn--ghost" href="https://www.codecademy.com/profiles/arjaygalpo" target="_blank" rel="noopener">Codecademy ↗</a>
         </div>
       </div>
