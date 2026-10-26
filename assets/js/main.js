@@ -139,6 +139,28 @@
     onView(v.parentElement, (on) => { if (on && !document.hidden) play(v); else v.pause(); });
   });
 
+  /* ---------- Songs: swap the thumbnail for a YouTube player on click ---------- */
+  let playing = null; // { link, player } of the song currently embedded
+  $$('a[data-yt]').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      if (e.ctrlKey || e.metaKey || e.shiftKey) return; // let modified clicks open YouTube
+      e.preventDefault();
+      // Only one song plays at a time: put the previous thumbnail back
+      if (playing) playing.player.replaceWith(playing.link);
+
+      const player = document.createElement('div');
+      player.className = 'song__media';
+      const f = document.createElement('iframe');
+      f.src = `https://www.youtube-nocookie.com/embed/${link.dataset.yt}?autoplay=1&rel=0`;
+      f.title = link.getAttribute('aria-label');
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.allowFullscreen = true;
+      player.append(f);
+      link.replaceWith(player);
+      playing = { link, player };
+    });
+  });
+
   /* ---------- Particle network behind the hero ---------- */
   const canvas = $('#particles');
   const ctx = canvas.getContext('2d');

@@ -127,6 +127,18 @@
     'lang.fr.aria': 'Débutant, 2 sur 5',
     'lang.fr.p': "Je peux tenir une conversation simple et je continue d'apprendre",
 
+    'nav.music': 'Musique',
+    'music.kicker': 'Après le travail',
+    'music.title': 'Jay Music',
+    'music.lead': "En dehors des TI, j'écris et j'enregistre des chansons originales en tagalog et en anglais sous le nom rj galpo, et je les partage sur ma chaîne YouTube.",
+    'music.latest': 'Dernière sortie',
+    'music.channel': 'Visiter ma chaîne YouTube ↗',
+    'music.play1': 'Écouter How Do I Unlove You',
+    'music.play2': 'Écouter Pangarap Lang Kita',
+    'music.play3': 'Écouter Gusto Kita',
+    'music.play4': 'Écouter Bukas Din',
+    'music.play5': 'Écouter Tuesday',
+
     'contact.title': 'Gardons vos systèmes en marche.',
     'contact.lead': 'Je suis ouvert à des postes en soutien TI, en systèmes et en développement web à Québec ou à distance.',
     'footer.city': 'Québec',
